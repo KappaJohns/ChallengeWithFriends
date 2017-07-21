@@ -12,6 +12,7 @@
 		2085ABC51F223B9000F4BB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2085ABC31F223B9000F4BB90 /* Main.storyboard */; };
 		2085ABC71F223B9000F4BB90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2085ABC61F223B9000F4BB90 /* Assets.xcassets */; };
 		2085ABCA1F223B9000F4BB90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2085ABC81F223B9000F4BB90 /* LaunchScreen.storyboard */; };
+		C83E43F22CD36C64D9A10457 /* Pods_ChallengeWithFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87F92BE8DB3FBE7C3730E47 /* Pods_ChallengeWithFriends.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		2085ABC61F223B9000F4BB90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2085ABC91F223B9000F4BB90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2085ABCB1F223B9000F4BB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		988F864D5C287EF66D131515 /* Pods-ChallengeWithFriends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeWithFriends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeWithFriends/Pods-ChallengeWithFriends.debug.xcconfig"; sourceTree = "<group>"; };
+		B87F92BE8DB3FBE7C3730E47 /* Pods_ChallengeWithFriends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeWithFriends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F555A34B2854CDE894380531 /* Pods-ChallengeWithFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeWithFriends.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChallengeWithFriends/Pods-ChallengeWithFriends.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83E43F22CD36C64D9A10457 /* Pods_ChallengeWithFriends.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				2085ABBE1F223B9000F4BB90 /* ChallengeWithFriends */,
 				2085ABBD1F223B9000F4BB90 /* Products */,
+				594C98476A35159B2AA4B214 /* Pods */,
+				EF9A137485152272ECFB9011 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = ChallengeWithFriends;
 			sourceTree = "<group>";
 		};
+		594C98476A35159B2AA4B214 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				988F864D5C287EF66D131515 /* Pods-ChallengeWithFriends.debug.xcconfig */,
+				F555A34B2854CDE894380531 /* Pods-ChallengeWithFriends.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF9A137485152272ECFB9011 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B87F92BE8DB3FBE7C3730E47 /* Pods_ChallengeWithFriends.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2085ABCE1F223B9000F4BB90 /* Build configuration list for PBXNativeTarget "ChallengeWithFriends" */;
 			buildPhases = (
+				2A8ED582E4EF09F3BA8A8E61 /* [CP] Check Pods Manifest.lock */,
 				2085ABB81F223B9000F4BB90 /* Sources */,
 				2085ABB91F223B9000F4BB90 /* Frameworks */,
 				2085ABBA1F223B9000F4BB90 /* Resources */,
+				32E11CFCA38D469A5B069818 /* [CP] Embed Pods Frameworks */,
+				2FE4286B71C2773E8793F8CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A8ED582E4EF09F3BA8A8E61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2FE4286B71C2773E8793F8CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChallengeWithFriends/Pods-ChallengeWithFriends-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32E11CFCA38D469A5B069818 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChallengeWithFriends/Pods-ChallengeWithFriends-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2085ABB81F223B9000F4BB90 /* Sources */ = {
@@ -260,6 +335,7 @@
 		};
 		2085ABCF1F223B9000F4BB90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 988F864D5C287EF66D131515 /* Pods-ChallengeWithFriends.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChallengeWithFriends/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		2085ABD01F223B9000F4BB90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F555A34B2854CDE894380531 /* Pods-ChallengeWithFriends.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChallengeWithFriends/Info.plist;
